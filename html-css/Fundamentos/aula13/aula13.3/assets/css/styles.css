@@ -1,0 +1,35 @@
+/* Resetando CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Selecioar apenas que tem o atributo */
+[meu-atributo~="valor1"] {
+    color: purple;
+}
+
+/* atributo seguido de traço*/
+[meu-atributo|="valor"] {
+    color: purple;
+}
+
+/* atributo começa com*/
+[meu-atributo^="valor"] {
+    color: purple;
+}
+
+/* atributo termina com*/
+[meu-atributo$="valor"] {
+    color: purple;
+}
+
+/* atributo contém*/
+[meu-atributo*="valor"] {
+    color: purple;
+}
+
+[checked] {
+    width: 50px;
+    height: 50px;
+}

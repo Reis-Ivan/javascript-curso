@@ -1,0 +1,12 @@
+:root {
+    --primary-color: #0A1228;
+    --secondary-color: crimson;
+    --white-color: #ffffff;
+    --light-gray-color: #EEEEEE;
+    --gap: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

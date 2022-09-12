@@ -1,0 +1,123 @@
+<!-- formulário HTML  -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário pt 1</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        label {
+            cursor: pointer;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<form action="#" method="get" target="_blank" autocomplete="off">
+    <p> O formulário</p>
+    <p>
+        <label for="nome">Nome:</label> <br>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+    </p>
+    <p>
+        <label for="dev1"> Sou font-end</label>
+        <input type="checkbox" id="dev1" name="dev1" value="front"> <br>
+        <label for="dev2"> Sou back-end</label>
+        <input type="checkbox" id="dev2" name="dev2" value="back"> <br>
+        <label for="dev3"> Sou full stack</label>
+        <input type="checkbox" id="dev3" name="dev3" value="full">
+    </p>
+    <!-- Tipo radio deve ter o mesmo valor em name -->
+    <p> Gênero: <br>
+        <label for="feminino"> Feminino</label>
+        <input type="radio" id="feminino" name="genero" value="feminino"> <br>
+        <label for="masculino"> Masculino</label>
+        <input type="radio" id="masculino" name="genero" value="masculino"> <br>
+        <label for="outro"> Outro (a)</label>
+        <input type="radio" id="outro" name="genero" value="outro">
+    </p>
+    <p>
+        <label for="date">Date:</label> <br>
+        <input type="date" name="date" id="date" value="2020-01-29">
+    </p>
+    <p>
+        <label for="datetime">Datetime:</label> <br>
+        <input type="datetime-local" name="datetime" id="datetime" value="2020-01-29T20:00">
+    </p>
+    <p>
+        <label for="time">Time:</label>
+        <input type="time" name="time" id="time" value="20:00:00">
+    </p>
+    <p>
+        <label for="cor">Cor preferida:</label>
+        <input type="color" name="cor" id="cor" value="#FF0000">
+    </p>
+    <p>
+        <label for="email">Seu e-mail:</label> <br>
+        <input type="email" name="email" id="email" placeholder="ex.: email@email.com">
+    </p>
+    <p>
+        <label for="file">Sua foto:</label> <br>
+        <input type="file" name="file" id="file" accept=".png,.svg,image/*" multiple>
+    </p>
+    <p>
+        <label for="number">Number:</label> <br>
+        <input type="number" name="number" id="number" min="10" max="50" s>
+    </p>
+    <p>
+        <label for="password">Sua senha:</label> <br>
+        <input type="password" name="password" id="password" placeholder="Digite sua senha">
+    </p>
+    <p>
+        <label for="range">range:</label> <br>
+        <input type="range" name="range" id="range" list="tickmarks">
+        <datalist id="tickmarks">
+            <option value="0" label="0%">
+            <option value="10">
+            <option value="20">
+            <option value="30">
+            <option value="40">
+            <option value="50" label="50%">
+            <option value="60">
+            <option value="70">
+            <option value="80">
+            <option value="90">
+            <option value="100" label="100%">
+    </p>
+    <p>
+        <label for="url">Sua url:</label> <br>
+        <input type="url" name="url" id="url" placeholder="URL">
+    </p>
+    <p>
+        <label for="search">search:</label> <br>
+        <input type="search" name="search" id="search" placeholder="search">
+    </p>
+    <p>
+        <label for="select">Selecione uma opção: </label>
+        <select name="select" id="select" multiple>
+            <optgroup label="Grupo 1">
+                <option value="qualquer1">Valor 1</option>
+                <option value="qualquer2" disabled>Valor 2</option>
+                <option value="qualquer3" selected>Valor 3</option>
+                <option value="qualquer4">Valor 4</option>
+            </optgroup>
+        </select>
+    </p>
+    <p>
+        <label for="textarea">Área de Texto:</label> <br>
+        <textarea name="txtarea" id="txtarea" cols="30" rows="5" placeholder="Digite seu texto"></textarea>
+    </p>
+    <p>
+        <button type="reset">Reset</button>
+        <button type="submit">Enviar</button>
+    </p>
+</form>
+
+</html>

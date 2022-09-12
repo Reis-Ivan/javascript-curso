@@ -1,0 +1,60 @@
+Tags HTML algumas:
+
+Tags inline (dentro da tag <p> de parágrafo):
+
+	<b> e <strong>
+		Texto em negrito, bold = físico, strong = lógico (acessibildiade)
+
+	<i> e <em>
+		Texto em negrito, italic = físico, em = lógico (acessibildiade)
+
+	<s>
+		Risco
+
+	<u>
+		Underline
+
+	<a>
+		Links, href = endereço de destino, target = como será executado 
+
+	<img>
+		Imagens, src = endereço da imagem, alt = texto alternativo (acessibilidade)
+
+	<del>
+		Deleta 
+
+	<inst>
+		Insere
+
+	<small>
+		Texto pequeno
+
+	<sup> e <sub >
+		Posição do texto (sobe e desce)
+
+	<br>
+		Quebra de linha
+
+	<q>
+		Citação
+		
+	<span>
+		Bloco genérico
+
+Tags display block:
+
+	<blockquote>
+		Texto (bloco) de citação
+		
+	<hr>
+		Linha horizontal
+		
+	<code>
+		Tag de código
+		
+	<pre>
+		Texto pré-formatado
+		
+	<div>
+		Bloco genérico
+		

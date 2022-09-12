@@ -1,0 +1,7 @@
+.pai .lista li:first-child {
+    background: red;
+}
+
+input:required {
+    background: orange;
+}

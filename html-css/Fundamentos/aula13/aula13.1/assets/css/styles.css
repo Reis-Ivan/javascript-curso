@@ -1,0 +1,19 @@
+/* Resetando CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    color: initial;
+    margin-left: 20px;
+}
+
+.main-content h2.heading {
+    font-style: italic;
+    color: purple;
+}
+
+.pai>.filha>.filha {
+    color: red;
+}

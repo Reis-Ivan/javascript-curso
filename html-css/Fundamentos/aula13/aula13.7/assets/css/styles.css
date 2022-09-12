@@ -1,0 +1,25 @@
+ul li {
+    width: 100px;
+    text-align: center;
+    color: white;
+}
+
+/* filhos por índice ímpares */
+ul li:nth-child(odd) {
+    background-color: rebeccapurple;
+}
+
+/* filhos por índice pares */
+ul li:nth-child(even) {
+    background-color: darkturquoise;
+}
+
+/* filhos por índice multiplos de 3 */
+ul li:nth-child(3n) {
+    background-color: darkolivegreen;
+}
+
+/* a partir do quinto de 3 em 3 */
+ul li:nth-child(3n+5) {
+    background-color: darkred;
+}

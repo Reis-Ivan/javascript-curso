@@ -1,0 +1,57 @@
+/* Resetando CSS */
+* {
+    margin: 3px;
+    padding: 0;
+}
+
+.heading {
+    transition: all 300ms ease-in-out;
+}
+
+/* Ponteiro sobre o elemento - hover */
+.heading:hover {
+    background: red;
+}
+
+a {
+    color: darkorange;
+}
+
+/* urls nunca visitadas - link */
+a:link {
+    color: deeppink;
+}
+
+/* urlsvisitadas - visited */
+a:visited {
+    color: firebrick;
+}
+
+a:hover {
+    background: darkblue;
+    color: white;
+    text-decoration: none;
+}
+
+/* url ativo/clicado */
+a:active {
+    background: darkslategray;
+    color: white;
+    text-decoration: none;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:disabled {
+    background: rebeccapurple;
+    cursor: not-allowed;
+}
+
+/* selecao do irmao adjacente (logo a baixo) */
+.teste:checked+p {
+    background: red;
+}

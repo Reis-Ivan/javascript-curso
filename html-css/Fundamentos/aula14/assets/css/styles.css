@@ -1,0 +1,17 @@
+/*
+1 - ID
+2 - Classes, atributos, pseudo-classes
+3 - Elementos, pseudo-elementos
+*/
+
+#p {
+    background: red;
+}
+
+.p {
+    background: yellow;
+}
+
+p {
+    background: green;
+}

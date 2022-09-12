@@ -1,0 +1,13 @@
+/* Resetando CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pai h1~p {
+    color: red;
+}
+
+.pai .um+.dois {
+    color: orange;
+}
