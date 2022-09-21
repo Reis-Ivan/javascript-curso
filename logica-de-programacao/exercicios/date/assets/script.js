@@ -28,13 +28,17 @@ function nomeDiaSemana(numeroDia) {
     }
 }
 
+function zeroEsquerda(num) {
+    return num >= 10 ? num : `0${num}`;
+}
+
 function formataData(data) {
     const nomeDia = nomeDiaSemana(data.getDay());
     const numDia = data.getDate();
     const nomeMes = data.toLocaleString("pt-BR", { month: "long" });
     const ano = data.getFullYear();
-    const horas = data.getHours();
-    const minutos = data.getMinutes();
+    const horas = zeroEsquerda(data.getHours())
+    const minutos = zeroEsquerda(data.getMinutes());
 
     return `${nomeDia}, ${numDia} de ${nomeMes} de ${ano} ${horas}:${minutos}`
 }
@@ -42,7 +46,6 @@ function formataData(data) {
 function setData(data) {
     const dataFormatada = formataData(data);
     const resultado = document.querySelector(".data");
-    resultado.innerHTML = '';
     resultado.innerHTML = dataFormatada;
 }
 
