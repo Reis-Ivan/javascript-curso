@@ -1,4 +1,5 @@
 const paragrafos = document.querySelector('.paragrafos');
+// NodeList
 const ps = paragrafos.querySelectorAll('p');
 
 const estilosBody = getComputedStyle(document.body);
