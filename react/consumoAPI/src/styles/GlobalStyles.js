@@ -13,7 +13,6 @@ export default createGlobalStyle`
   body {
     font-family: sans-serif;
     background: ${colors.primaryDarkColor};
-    color: ${colors.primaryColor};
   }
 
   html, body, #root {
@@ -28,6 +27,11 @@ export default createGlobalStyle`
     padding: 10px 20px;
     border-radius: 4px;
     font-weight: 700;
+    transform: all 300ms;
+  }
+
+  button:hover {
+    filter: brightness(75%);
   }
 
   a {
