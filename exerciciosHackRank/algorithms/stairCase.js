@@ -1,8 +1,8 @@
-let n = 6;
-function stairCase(n) {
-  for (let i = 1; i <= n; i++) {
-    console.log(" ".repeat(n - i) + "#".repeat(i));
+const num = 6;
+function stairCase(num) {
+  for (let i = 1; i <= num; i += 1) {
+    console.log(' '.repeat(num - i) + '#'.repeat(i));
   }
 }
 
-stairCase(n);
+stairCase(num);

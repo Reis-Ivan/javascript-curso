@@ -1,7 +1,5 @@
-// Função retorna a soma de 2 números inteiros
-
-a = 2;
-b = 3;
+const a = 2;
+const b = 3;
 
 function solveMeFirst(a, b) {
   return a + b;

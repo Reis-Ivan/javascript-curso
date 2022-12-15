@@ -4,7 +4,7 @@
  20 21 22
  */
 
-arr = [
+const ar = [
   [11, 2, 4],
   [4, 5, 6],
   [10, 8, -12],
@@ -12,23 +12,23 @@ arr = [
 
 // Na raça
 function diagonalDifference(arr) {
-  let dimension = arr.length;
-  let primaryDiagonal = [];
-  let secondaryDiagonal = [];
+  const dimension = arr.length;
+  const primaryDiagonal = [];
+  const secondaryDiagonal = [];
 
-  for (let i = 0; i < dimension; i++) {
-    for (let j = 0; j < dimension; j++) {
+  for (let i = 0; i < dimension; i += 1) {
+    for (let j = 0; j < dimension; j += 1) {
       if (i === j) primaryDiagonal.push(arr[i][j]);
       if (i + j === dimension - 1) secondaryDiagonal.push(arr[i][j]);
     }
   }
 
-  let sumPrimary = primaryDiagonal.reduce((acc, cur) => {
+  const sumPrimary = primaryDiagonal.reduce((acc, cur) => {
     acc += cur;
     return acc;
   });
 
-  let sumSecondary = secondaryDiagonal.reduce((acc, cur) => {
+  const sumSecondary = secondaryDiagonal.reduce((acc, cur) => {
     acc += cur;
     return acc;
   });
@@ -38,13 +38,16 @@ function diagonalDifference(arr) {
 
 // Na elegância
 function diagonalDifference1(arr) {
-  let dimension = arr.length - 1;
+  const dimension = arr.length - 1;
   let sumone = 0;
   let sumtwo = 0;
 
-  arr.forEach((ele, ind, arr) => {
+  arr.forEach((ele, ind) => {
     sumone += ele[ind];
     sumtwo += ele[dimension - ind];
   });
   return Math.abs(sumone - sumtwo);
 }
+
+diagonalDifference(ar);
+diagonalDifference1(ar);
