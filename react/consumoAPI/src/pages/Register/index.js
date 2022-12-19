@@ -11,12 +11,10 @@ import * as actions from '../../store/modules/auth/actions';
 export default function Register() {
   const dispath = useDispatch();
 
-  const id = useSelector((state) => console.log(state.auth.user.id));
-  const nomeStored = useSelector((state) => console.log(state.auth.user.nome));
-  const emailStored = useSelector((state) =>
-    console.log(state.auth.user.email)
-  );
-  const isLoading = useSelector((state) => console.log(state.auth.isLoading));
+  const id = useSelector((state) => state.auth.user.id);
+  const nomeStored = useSelector((state) => state.auth.user.nome);
+  const emailStored = useSelector((state) => state.auth.user.email);
+  const isLoading = useSelector((state) => state.auth.isLoading);
 
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
@@ -31,6 +29,7 @@ export default function Register() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+
     let formErrors = false;
 
     if (nome.length < 3 || nome.length > 255) {
