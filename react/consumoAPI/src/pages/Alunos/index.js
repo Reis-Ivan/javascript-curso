@@ -6,6 +6,7 @@ import {
   FaEdit,
   FaWindowClose,
   FaExclamation,
+  FaPlus,
 } from 'react-icons/fa';
 
 import { toast } from 'react-toastify';
@@ -64,7 +65,9 @@ export default function Alunos() {
 
       <h1>Alunos</h1>
 
-      <NovoAluno to="/aluno">Novo aluno</NovoAluno>
+      <NovoAluno to="/aluno">
+        <FaPlus size={18} />
+      </NovoAluno>
 
       <AlunoContainer>
         {alunos.map((aluno, index) => (
