@@ -1,45 +1,48 @@
-import { Sequelize, Model } from 'sequelize';
-import appConfig from '../config/appConfig';
+import { Sequelize, Model } from "sequelize";
+import appConfig from "../config/appConfig";
 
 export default class Foto extends Model {
   static init(sequelize) {
-    super.init({
+    super.init(
+      {
+        originalname: {
+          type: Sequelize.STRING,
+          defaultValue: "",
+          validate: {
+            notEmpty: {
+              msg: "Campo não pode ficar vazio",
+            },
+          },
+        },
 
-      originalname: {
-        type: Sequelize.STRING,
-        defaultValue: '',
-        validate: {
-          notEmpty: {
-            msg: 'Campo não pode ficar vazio',
+        filename: {
+          type: Sequelize.STRING,
+          defaultValue: "",
+          validate: {
+            notEmpty: {
+              msg: "Campo não pode ficar vazio",
+            },
+          },
+        },
+
+        url: {
+          type: Sequelize.VIRTUAL,
+          get() {
+            return `${appConfig.url}:81/images/${this.getDataValue(
+              "filename"
+            )}`;
           },
         },
       },
-
-      filename: {
-        type: Sequelize.STRING,
-        defaultValue: '',
-        validate: {
-          notEmpty: {
-            msg: 'Campo não pode ficar vazio',
-          },
-        },
-      },
-
-      url: {
-        type: Sequelize.VIRTUAL,
-        get() {
-          return `${appConfig.url}/images/${this.getDataValue('filename')}`;
-        },
-      },
-
-    }, {
-      sequelize,
-      tableName: 'fotos',
-    });
+      {
+        sequelize,
+        tableName: "fotos",
+      }
+    );
     return this;
   }
 
   static associate(models) {
-    this.belongsTo(models.Aluno, { foreignKey: 'aluno_id' });
+    this.belongsTo(models.Aluno, { foreignKey: "aluno_id" });
   }
 }
