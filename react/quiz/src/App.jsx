@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     dispatch({ type: types.REODER_QUESTIONS });
-  });
+  }, []);
 
   return (
     <div className="App">
