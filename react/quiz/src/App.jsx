@@ -1,12 +1,24 @@
-import Welcome from "./components/Welcome";
+import { useContext, useEffect } from 'react';
+import { QuizContext } from './context/quiz';
 
-import "./App.css";
+import Welcome from './components/Welcome/Welcome';
+import Question from './components/Question/Question';
+
+import './App.css';
+import * as types from './context/types';
 
 function App() {
+  const [quizState, dispatch] = useContext(QuizContext);
+
+  useEffect(() => {
+    dispatch({ type: types.REODER_QUESTIONS });
+  });
+
   return (
     <div className="App">
       <h1>Quiz de Programação</h1>
-      <Welcome />
+      {quizState.gameStage === types.STAGE_START && <Welcome />}
+      {quizState.gameStage === types.STAGE_PLAYING && <Question />}
     </div>
   );
 }
