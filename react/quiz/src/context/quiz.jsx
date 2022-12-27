@@ -35,6 +35,7 @@ const quizReducer = (state, action) => {
         ...state,
         currentQuestion: nextQuestion,
         gameStage: endGame ? types.STAGE_END : state.gameStage,
+        answerSelected: false,
       };
 
     case types.NEW_GAME:
