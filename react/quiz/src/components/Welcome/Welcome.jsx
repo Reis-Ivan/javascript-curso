@@ -9,6 +9,7 @@ import * as types from '../../context/types';
 
 const Welcome = () => {
   const [quizState, dispatch] = useContext(QuizContext);
+  console.log(quizState);
 
   return (
     <div id="welcome">

@@ -10,6 +10,8 @@ import * as types from '../../context/types';
 const Question = () => {
   const [quizState, dispatch] = useContext(QuizContext);
   const currentQuestion = quizState.questions[quizState.currentQuestion];
+  console.log(quizState);
+  console.log(currentQuestion);
 
   const onSelectOption = (option) => {
     dispatch({
@@ -31,12 +33,25 @@ const Question = () => {
             key={option}
             answer={currentQuestion.answer}
             selectOption={() => onSelectOption(option)}
+            hide={quizState.optionToHide === option ? 'hide' : null}
           />
         ))}
+
+        {!quizState.answerSelected && !quizState.help && (
+          <>
+            {currentQuestion.tip && (
+              <button onClick={() => dispatch({ type: types.SHOW_TIP })}>Dica</button>
+            )}
+            <button onClick={() => dispatch({ type: types.REMOVE_OPTION })}>Excluir Uma</button>
+          </>
+        )}
+
+        {!quizState.answerSelected && quizState.help === 'tip' && <p>{currentQuestion.tip}</p>}
+
+        {quizState.answerSelected && (
+          <button onClick={() => dispatch({ type: types.CHANGE_QUESTION })}>Continuar</button>
+        )}
       </div>
-      {quizState.answerSelected && (
-        <button onClick={() => dispatch({ type: types.CHANGE_QUESTION })}> Continuar</button>
-      )}
     </div>
   );
 };
