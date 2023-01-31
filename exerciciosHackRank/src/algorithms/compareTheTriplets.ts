@@ -1,7 +1,7 @@
-const a = [17, 28, 30];
-const b = [99, 16, 8];
+const x = [17, 28, 30];
+const y = [99, 16, 8];
 
-function compareTriplets(varA, varB) {
+function compareTriplets(varA: number[], varB: number[]): number[] {
   let aScore = 0;
   let bScore = 0;
 
@@ -14,4 +14,4 @@ function compareTriplets(varA, varB) {
   return results;
 }
 
-console.log(compareTriplets(a, b));
+console.log(compareTriplets(x, y));
